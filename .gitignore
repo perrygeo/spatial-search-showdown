@@ -1,0 +1,3 @@
+.vagrant
+_try*
+geonames-for-postgis/*

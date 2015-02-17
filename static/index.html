@@ -1,0 +1,122 @@
+<html>
+<head>
+  <script src="/static/ol-debug.js"></script>
+  <link rel="stylesheet" href="/static/ol.css"></link>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+  <style>
+  html body {
+    width: 100%;
+    height:100%;
+  }
+  #map {
+    width:100%;
+    height:100%;
+  }
+  </style>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+
+
+
+<script>
+
+var type="elasticsearch"
+var vectorSource = new ol.source.ServerVector({
+  format: new ol.format.GeoJSON(),
+  loader: function(extent, resolution, projection) {
+    var epsg4326Extent =
+        ol.proj.transformExtent(extent, projection, 'EPSG:4326');
+    var url = 'http://localhost:5000/' + type + '/search?bbox=' +
+        epsg4326Extent.join(',');
+    $.ajax(url).then(function(response) {
+      vectorSource.addFeatures(vectorSource.readFeatures(response));
+    });
+  },
+  strategy: ol.loadingstrategy.bbox,
+  projection: 'EPSG:3857'
+});
+
+var getText = function(feature, resolution, dom) {
+  var text = feature.get('name');
+  return text;
+  // Not working ... return stringDivider(text, 12, '\n');
+};
+
+var createTextStyle = function(feature, resolution) {
+  return new ol.style.Text({
+    textAlign: 'center',
+    textBaseline: 'middle',
+    font: '9pt Arial',
+    text: getText(feature, resolution),
+    fill: new ol.style.Fill({color: 'white'}),
+    stroke: new ol.style.Stroke({color: 'black', width: 1}),
+    offsetX: 0,
+    offsetY: 0,
+    rotation: 0
+  });
+};
+
+var createPointStyle = function() {
+  return function(feature, resolution) {
+    var style = new ol.style.Style({
+      image: new ol.style.Circle({
+        radius: 10,
+        fill: new ol.style.Fill({color: 'rgba(255, 0, 0, 0.1)'}),
+        stroke: new ol.style.Stroke({color: 'blue', width: 1})
+      }),
+      text: createTextStyle(feature, resolution)
+    });
+    return [style];
+  };
+};
+
+var vector = new ol.layer.Vector({
+  source: vectorSource,
+  style: createPointStyle()
+});
+
+var raster = new ol.layer.Tile({
+  source: new ol.source.BingMaps({
+    imagerySet: 'Aerial',
+    key: 'Ak-dzM4wZjSqTlzveKz5u0d4IQ4bRzVI309GxmkgSVr1ewS6iPSrOvOKhA-CJlm3'
+  })
+});
+
+var map = new ol.Map({
+  layers: [raster, vector],
+  target: document.getElementById('map'),
+  projection: "EPSG:3857",
+  view: new ol.View({
+    center: [-13546563.584518423, 5679389.354459213],
+    maxZoom: 19,
+    zoom: 12
+  })
+});
+
+// http://stackoverflow.com/questions/14484787/wrap-text-in-javascript
+function stringDivider(str, width, spaceReplacer) {
+  if (str.length > width) {
+    var p = width;
+    for (; p > 0 && (str[p] != ' ' && str[p] != '-'); p--) {
+    }
+    if (p > 0) {
+      var left;
+      if (str.substring(p, p + 1) == '-') {
+        left = str.substring(0, p + 1);
+      } else {
+        left = str.substring(0, p);
+      }
+      var right = str.substring(p + 1);
+      return left + spaceReplacer + stringDivider(right, width, spaceReplacer);
+    }
+  }
+  return str;
+}
+</script>
+
+</body></html>

@@ -1,0 +1,21 @@
+{
+    "from" : 0, 
+    "size" : 1000,
+    "query": {
+        "filtered" : {
+            "query" : {
+                "match_all" : {}
+            },
+            "filter" : {
+                "geo_bounding_box" : {
+                    "location" : {
+                        "top" : 49.5138,
+                        "left" : 10.9351,
+                        "bottom" : 49.3866,
+                        "right" : 11.201
+                    }
+                }
+            }
+        }
+    }
+}

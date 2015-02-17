@@ -1,0 +1,19 @@
+{
+    "type" : "jdbc",
+    "jdbc" : {
+        "url" : "jdbc:postgresql://192.168.99.2:5432/geonames",
+        "user" : "postgres",
+        "sql" : "SELECT g.name as name, g.alternatenames as alternatenames, g.country as countrycode, g.fclass as featureclass, f.code as featurecodeid, f.name as featuretype, latitude as \"location.lat\", longitude as \"location.lon\"FROM geoname AS g JOIN featurecodes AS f ON f.code = g.featurecodeid;",
+        "index" : "geonameidx",
+        "type" : "geoname",
+        "type_mapping": {
+            "geoname" : {
+                "properties" : {
+                    "location" : {
+                        "type" : "geo_point"
+                    }
+                }
+            }
+        }
+    }
+}

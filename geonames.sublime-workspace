@@ -1,0 +1,659 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sear",
+				"searchTermInput"
+			],
+			[
+				"theme",
+				"themeFixture"
+			],
+			[
+				"the",
+				"themeFixture〔argument〕"
+			],
+			[
+				"sea",
+				"searchTerm"
+			],
+			[
+				"ope",
+				"openThemes"
+			],
+			[
+				"cr",
+				"csrf_exempt"
+			],
+			[
+				"leas",
+				"leaseblock_ids"
+			],
+			[
+				"Lease",
+				"LeaseBlockSelection"
+			],
+			[
+				"handle",
+				"handle_none"
+			],
+			[
+				"dis",
+				"distance-to-shipping"
+			],
+			[
+				"rep",
+				"report_values"
+			],
+			[
+				"attr",
+				"attributes"
+			],
+			[
+				"wind",
+				"wind-speed"
+			],
+			[
+				"hand",
+				"handle_none"
+			],
+			[
+				"min",
+				"min_wind_speed_rev"
+			],
+			[
+				"file",
+				"fieldname"
+			],
+			[
+				"han",
+				"handle_null"
+			],
+			[
+				"leaseblock",
+				"leaseblock_aggregate"
+			],
+			[
+				"max",
+				"max_wind_speed_rev"
+			],
+			[
+				"lease",
+				"leaseblocks"
+			],
+			[
+				"Ex",
+				"Exception"
+			],
+			[
+				"feature",
+				"featureAttributionName"
+			],
+			[
+				"ag",
+				"aggregatedAttributes"
+			],
+			[
+				"att",
+				"attributeLayers"
+			],
+			[
+				"inf",
+				"infoLookup"
+			],
+			[
+				"PROJ",
+				"PROJECT_DIR"
+			]
+		]
+	},
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":wq",
+				"BracketHighlighter: Swap Quotes"
+			],
+			[
+				":q",
+				"BracketHighlighter: Swap Quotes"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				":e",
+				":e - Revert"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"KEY",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				":",
+				":$ - EOF"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 507.0
+	},
+	"console":
+	{
+		"height": 188.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mperry/projects/geonames/volumes/es/data/elasticsearch.yml",
+		"/Users/mperry/projects/geonames/fig.yml",
+		"/Users/mperry/projects/p97/marco-portal2/static/_visualize/js/app.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/styles/marco_site.less",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/styles/pages/search.less",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/gulp-less/node_modules/less/lib/less-node/plugin-loader.js",
+		"/Users/mperry/projects/p97/p97.sublime-project",
+		"/Users/mperry/projects/p97/marco-portal2/deps/wagtail/wagtail/wagtailsearch/management/commands/search_garbage_collect.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/wagtail/wagtail/wagtailadmin/templates/wagtailadmin/pages/search_results.html",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout-mapping/build/tools/searchReplace.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout/build/tools/searchReplace.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/wagtail/wagtail/wagtailsearch/templates/wagtailsearch/search_results.html",
+		"/Users/mperry/projects/p97/marco-portal2/deps/wagtail/wagtail/wagtailadmin/templates/wagtailadmin/pages/search.html",
+		"/Users/mperry/projects/p97/marco-portal2/deps/wagtail/wagtail/wagtailadmin/templates/wagtailadmin/chooser/search.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/wagtail/wagtail/wagtailadmin/templates/wagtailadmin/chooser/search.html",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/knockout-mapping/build/tools/searchReplace.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/knockout/build/tools/searchReplace.js",
+		"/Users/mperry/projects/p97/marco-portal2/portal/base/templates/portal/components/search_form.html",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/jquery.bbq/docs/javascript/searchdata.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jquery.bbq/docs/javascript/searchdata.js",
+		"/Users/mperry/projects/p97/marco-portal2/portal/base/templates/portal/search_results.html",
+		"/Users/mperry/projects/p97/marco-portal2/deps/wagtail/docs/core_components/search/searching.rst",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/knockout/src/binding/selectExtensions.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/madrona-analysistools-master/setup.py",
+		"/Users/mperry/projects/p97/marco-portal2/marco_config/wsgi.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/static/visualize/js/bookmarks.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-data-manager-master/data_manager/views.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/static/visualize/js/scenarios.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/static/visualize/js/pageguide.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/static/visualize/js/models.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/static/visualize/js/map.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/static/visualize/js/knockout-bindings.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/static/visualize/js/fixtures.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/webpack/node_modules/uglify-js/lib/mozilla-ast.js",
+		"/Users/mperry/projects/p97/marco-portal2/manage.py",
+		"/Users/mperry/projects/p97/marco-portal2/marco_config/urls.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-data-manager-master/data_manager/urls.py",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/styles/pages/marine_planner.less",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/fixtures/data_manager.json",
+		"/Users/mperry/projects/p97/marco-portal2/portal/data_catalog/urls.py",
+		"/Users/mperry/projects/p97/marco-portal2/portal/data_catalog/models.py",
+		"/Users/mperry/projects/p97/marco-portal2/portal/data_catalog/views.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-accounts-master/accounts/templates/accounts/login.html",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-accounts-master/accounts/templates/accounts/index.html",
+		"/Users/mperry/projects/p97/marco-portal2/deps/marco-map-groups-master/mapgroups/views.py",
+		"/Users/mperry/projects/p97/marco-portal2/marco_config/__init__.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/marco-map-groups-master/mapgroups/models.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-drawing-master/drawing/views.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/madrona-scenarios-master/scenarios/models.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-drawing-master/drawing/models.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/madrona-features-master/features/managers.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/marco-map-groups-master/mapgroups/actions.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/marco-map-groups-master/mapgroups/tests.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/madrona-scenarios-master/scenarios/views.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/madrona-scenarios-master/scenarios/urls.py",
+		"/Users/mperry/projects/p97/marco-portal2/Vagrantfile",
+		"/Users/mperry/projects/p97/marco-portal2/deps/madrona-features-master/features/models.py",
+		"/Users/mperry/projects/p97/marco-portal2/marco_config/settings/__init__.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-drawing-master/drawing/__init__.py",
+		"/Users/mperry/projects/p97/marco-portal2/static/_visualize/js/drawing.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jquery-ui/ui/i18n/datepicker-rm.js",
+		"/Users/mperry/projects/p97/marco-portal2/scripts/deploy",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/webpack/bin/config-optimist.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/gulp/node_modules/liftoff/lib/find_config.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/browser-sync/lib/config.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/brand/marco_icon.svg",
+		"/Users/mperry/projects/p97/marco-portal2/static/css/marco_site.css",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/browser-sync/lib/cli/cli-info.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/webpack/node_modules/enhanced-resolve/test/CachedInputFileSystem.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/bundles/marco_site.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/__init__.py",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/templates/marco_site/styleguide.html",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/jscrollpane/events.html",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/jquery-ui/ui/effect-transfer.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/jquery-ui/ui/minified/effect-transfer.min.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/jscrollpane/settings.html",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout/src/templating/templateSources.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/gulp-util/node_modules/through2/node_modules/readable-stream/lib/_stream_duplex.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/gulp-util/node_modules/through2/node_modules/readable-stream/lib/_stream_writable.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/gulp-notify/node_modules/lodash.template/node_modules/lodash.templatesettings/node_modules/lodash._reescape/index.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/gulp-util/node_modules/through2/node_modules/readable-stream/node_modules/inherits/inherits.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/gulp-util/node_modules/through2/node_modules/readable-stream/node_modules/inherits/inherits_browser.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout/spec/templatingBehaviors.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/js/marco_site.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/css/marco_site.css",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bundles/marco_site.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/scss/marco_site.scss",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/static/visualize/js/drawing.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/static/visualize/js/app.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/templates/visualize/planner.html",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-data-manager-master/data_manager/models.py",
+		"/Users/mperry/projects/p97/marco-portal2/static/_visualize/js/models.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/_visualize/js/map.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/_visualize/js/scenarios.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/__init__.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/templates/visualize/legend.html",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-visualize-master/visualize/admin.py",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/gulp/node_modules/vinyl-fs/node_modules/strip-bom/node_modules/is-utf8/is-utf8.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/gulp-less/node_modules/less/lib/less/visitors/visitor.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/gulp-util/node_modules/vinyl/lib/isStream.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/gulp-less/node_modules/less/test/css/variables-in-at-rules.css",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/styles/bootstrap/mixins/nav-vertical-align.less",
+		"/Users/mperry/projects/p97/marco-portal2/static/_visualize/deps/openlayers/arcgisrestidentify.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-proxy/mp_proxy/urls.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-proxy/mp_proxy/views.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-proxy/setup.py",
+		"/Users/mperry/projects/p97/marco-portal2/requirements.txt",
+		"/Users/mperry/projects/p97/marco-portal2/deps/mp-explore-master/explore/urls.py",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/auto_reinitialise.html",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/browser-sync/lib/args.js",
+		"/Users/mperry/projects/p97/marco-portal2/deps/_scenarios_bad/scenarios/admin.py",
+		"/Users/mperry/projects/p97/marco-portal2/deps/wagtail/docs/editor_manual/getting_started.rst",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/settings.html",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/styles/bootstrap/responsive-embed.less",
+		"/Users/mperry/projects/p97/marco-portal2/README.md",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/issues/12/jscrollpane-2b3.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/issues/12/jscrollpane-2b3.css",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/issues/11/jscrollpane-2b3.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/issues/11/jscrollpane-2b3.css",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout-mapping/spec/lib/json2.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout/spec/lib/JSSpec.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout/spec/lib/JSSpec.css",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout/spec/lib/json2.js",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/jquery.bbq/shared/json_echo.php",
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/jquery/src/ajax/jsonp.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/knockout-mapping/spec/lib/json2.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/knockout/spec/lib/JSSpec.js",
+		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/knockout/spec/lib/JSSpec.css"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 119.0,
+		"where_history":
+		[
+			"*.*",
+			"*.js",
+			"*.less",
+			"*.lss",
+			"",
+			"*.html",
+			"*.js",
+			"",
+			"*.js",
+			"*.html",
+			"*.less",
+			"*.html",
+			"*.js",
+			"*.py",
+			"*.js",
+			"*.js*",
+			"",
+			"*scenarios*",
+			"",
+			"*.js",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\\\",
+			"//",
+			"WORKPATH",
+			"dropdown",
+			"typeahead",
+			"search-box",
+			"search-inst",
+			"{\n",
+			"fa-search",
+			"fa-icon",
+			"console",
+			"typeahead",
+			"typeahed",
+			"dropdown-menu",
+			"keySearch",
+			"typeahead",
+			"type",
+			"typeahead",
+			"search-box",
+			"search-input",
+			"search",
+			"typeAheadSource",
+			"typeahead",
+			"searchTerm",
+			"layerSearchIndex",
+			"search",
+			"isOpenTheme",
+			"search-",
+			"openThemes",
+			"inst",
+			"search-box",
+			"-18",
+			"form-search",
+			"left-maximized",
+			"panel-heading",
+			"keySearch",
+			"keysearch",
+			"form-search",
+			"search",
+			"layerSearch",
+			"panel-title",
+			"search",
+			"layerSearch",
+			"addLayers",
+			"map.js",
+			"removeBookmark",
+			"legend-wrapper",
+			"Coldwater Corals",
+			"awc_hub_icon.png",
+			"You currently",
+			"id=\"data",
+			"design",
+			"id=\"desig",
+			"id=\"designs",
+			"Custom",
+			"Active",
+			"disable",
+			"template-visualize",
+			"fa-arrow-down",
+			"download",
+			"metadata",
+			"copy_design",
+			"join",
+			"AOI",
+			"Shareable",
+			"shared_with_user",
+			"shared_with",
+			"share_design",
+			"get_sharing_groups",
+			"sharing_groups",
+			"'Area'",
+			"\"Area\"",
+			"Area",
+			"over",
+			"drawingModel",
+			"jjk",
+			"console",
+			"debugger",
+			"debugg",
+			"console",
+			"overview",
+			"sharedByWho",
+			"overview",
+			"drawingModel",
+			"console",
+			"truncatedText",
+			"toggleDescription",
+			"toggleDecsription",
+			"area",
+			"overview",
+			"truncatedText",
+			"mouseup",
+			"clickLocation",
+			"base",
+			"basemap",
+			"basemaps",
+			"basemap",
+			"esriOcean",
+			"Google",
+			"activateLeaseblockLayer",
+			"activateLease",
+			"activateLease/",
+			"activateLease",
+			"isLeaseblockLayerVisible",
+			"debugger",
+			"showRemainingBlocks",
+			"isLeaseblockLayerVisible",
+			"showing remaining blocks",
+			"self.leaseblocksleft",
+			"leaseblocksLeft",
+			"truncatedText",
+			"kml",
+			"proxy",
+			"Unknown",
+			"apps",
+			"<<<<<",
+			"password",
+			"<<<<",
+			"GEOM",
+			"substation",
+			"class LeaseBlock",
+			"LeaseBlock",
+			"leaseblocks",
+			"null",
+			"aggregate",
+			"ipdb",
+			"Exception",
+			"serialize_attributes"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"awc",
+			"agg",
+			"blocks"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 43.0
+	},
+	"input":
+	{
+		"height": 45.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 162.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"planner",
+				"marco-portal2/deps/mp-visualize-master/visualize/templates/visualize/planner.html"
+			],
+			[
+				"search",
+				"marco-portal2/marco_site/assets/styles/pages/search.less"
+			],
+			[
+				"map.js",
+				"marco-portal2/deps/mp-visualize-master/visualize/static/visualize/js/map.js"
+			],
+			[
+				"drawing/vi",
+				"marco-portal2/deps/mp-drawing-master/drawing/views.py"
+			],
+			[
+				"marco_config",
+				"marco-portal2/marco_config/settings/__init__.py"
+			],
+			[
+				"visualize/js/mod",
+				"marco-portal2/static/_visualize/js/models.js"
+			],
+			[
+				"vag",
+				"marco-portal2/Vagrantfile"
+			],
+			[
+				"arcgis",
+				"marco-portal2/static/_visualize/deps/openlayers/arcgisrestidentify.js"
+			],
+			[
+				"settings/__",
+				"marco-portal2/marco_config/settings/__init__.py"
+			],
+			[
+				"read",
+				"marco-portal2/README.md"
+			],
+			[
+				"test_",
+				"marco-portal2/deps/madrona-scenarios-master/tests/test_leaseblock_serialization.py"
+			],
+			[
+				"tests.py",
+				"marco-portal2/deps/wagtail/runtests.py"
+			],
+			[
+				"test",
+				"marco-portal2/deps/madrona-scenarios-master/scenarios/tests.py"
+			],
+			[
+				"models.js",
+				"marco-portal2/deps/mp-visualize-master/visualize/static/visualize/js/models.js"
+			],
+			[
+				"urls",
+				"marco-portal2/marco_config/urls.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/projects/p97/p97.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
