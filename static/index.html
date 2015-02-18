@@ -20,25 +20,20 @@
 
 <div id="map"></div>
 
-
-
-
 <script>
-
-var type="elasticsearch"
 var vectorSource = new ol.source.ServerVector({
   format: new ol.format.GeoJSON(),
   loader: function(extent, resolution, projection) {
     var epsg4326Extent =
         ol.proj.transformExtent(extent, projection, 'EPSG:4326');
-    var url = 'http://localhost:5000/' + type + '/search?bbox=' +
+    var url = 'http://localhost:5000/geonames/search?bbox=' +
         epsg4326Extent.join(',');
     $.ajax(url).then(function(response) {
-      vectorSource.clear();
+      // vectorSource.clear(); <-- causes infinite loop of requests (?!?)
       vectorSource.addFeatures(vectorSource.readFeatures(response));
     });
   },
-  strategy: ol.loadingstrategy.bbox,
+  //strategy: ol.loadingstrategy.bbox(),
   projection: 'EPSG:3857'
 });
 
@@ -99,25 +94,6 @@ var map = new ol.Map({
   })
 });
 
-// http://stackoverflow.com/questions/14484787/wrap-text-in-javascript
-function stringDivider(str, width, spaceReplacer) {
-  if (str.length > width) {
-    var p = width;
-    for (; p > 0 && (str[p] != ' ' && str[p] != '-'); p--) {
-    }
-    if (p > 0) {
-      var left;
-      if (str.substring(p, p + 1) == '-') {
-        left = str.substring(0, p + 1);
-      } else {
-        left = str.substring(0, p);
-      }
-      var right = str.substring(p + 1);
-      return left + spaceReplacer + stringDivider(right, width, spaceReplacer);
-    }
-  }
-  return str;
-}
 </script>
 
 </body></html>

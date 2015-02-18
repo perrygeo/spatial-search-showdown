@@ -5,17 +5,17 @@ from sqlalchemy.sql import text
 import json
 import requests
 
-db = sqlalchemy.create_engine('postgresql+psycopg2://postgres:@192.168.99.2/geonames')
-conn = db.connect()
 app = Flask(__name__)
 
-session = requests.Session()
-
-sqltext = text("""SELECT 
-     g.name,
-     g.alternatenames,
-     f.name as featuretype,
-     ST_AsGeoJSON(g.the_geom) AS geometry
+# Postgres connections
+db = sqlalchemy.create_engine('postgresql+psycopg2://postgres:@192.168.99.2/geonames')
+conn = db.connect()
+sql = text("""
+SELECT
+    g.name,
+    g.alternatenames,
+    f.name as featuretype,
+    ST_AsGeoJSON(g.the_geom) AS geometry
 FROM geoname AS g
 JOIN featurecodes AS f
 ON f.code = g.featurecodeid
@@ -23,33 +23,37 @@ WHERE g.the_geom && ST_MakeEnvelope(:west, :south, :east, :north, 4326)
 """)
 
 
+# HTTP Sessions, for elasticsearch
+session = requests.Session()
+URL = "http://192.168.99.3:9200/geonameidx/_search"
+
+
 @app.route('/')
 def main():
     return app.send_static_file('index.html')
 
-    return '''
-    <ul>
-    <li>
-        <a href="/postgis/search?bbox=10.9351,49.3866,11.201,49.5138">
-          /postgis/search?bbox=10.9351,49.3866,11.201,49.5138
-        </a>
-    </li>
-    <li>
-        <a href="/elasticsearch/search?bbox=10.9351,49.3866,11.201,49.5138">
-          /elasticsearch/search?bbox=10.9351,49.3866,11.201,49.5138
-        </a>
-    </li>
-    </ul>
-'''
 
-@app.route('/postgis/search')
-def postgis():
+@app.route('/geonames/search')
+def geonames():
     bbox_str = request.args.get('bbox')
+    provider = request.args.get('provider')
+    if not provider:
+        # default provider
+        # provider = "postgis"
+        provider = "elasticsearch"
     bbox = [float(x) for x in bbox_str.split(',')]
     bounds = dict(zip(['west','south','east','north'], bbox))
 
-    result = conn.execute(sqltext, **bounds)
+    if provider == "postgis":
+        results = query_postgis(bounds)
+    elif provider == "elasticsearch":
+        results = query_elasticsearch(bounds)
 
+    return jsonify(results)
+
+
+def query_postgis(bounds):
+    result = conn.execute(sqltext, **bounds)
     features = []
     for row in result:
         f = {
@@ -62,24 +66,18 @@ def postgis():
           }
         }
         features.append(f)
-
-    return jsonify({
+    return {
         'type': 'FeatureCollection',
         'features': features
-    })
+    }
 
-PAGE_SIZE=1000
-URL="http://192.168.99.3:9200/geonameidx/_search"
 
-@app.route('/elasticsearch/search')
-def elasticsearch():
-    bbox_str = request.args.get('bbox')
-    bbox = [float(x) for x in bbox_str.split(',')]
-    bounds = dict(zip(['west','south','east','north'], bbox))
+def query_elasticsearch(bounds):
+    page_size = 1000
 
     query = {
         "from" : 0, 
-        "size" : PAGE_SIZE,
+        "size" : page_size,
         "query": {
             "filtered" : {
                 "query" : {
@@ -120,10 +118,10 @@ def elasticsearch():
         }
         features.append(f)
 
-    return jsonify({
+    return {
         'type': 'FeatureCollection',
         'features': features
-    })
+    }
 
 
 if __name__ == '__main__':

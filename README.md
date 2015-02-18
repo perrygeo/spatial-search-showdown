@@ -94,7 +94,7 @@ Not pretty but a passable web user interface. My preferred way to test it is usi
 a json document with some info about a city; that's the essence of elasticsearch.
 No
 
-    curl -XPOST http://192.168.99.2:9200/test/city/ -d '
+    curl -XPOST http://192.168.99.3:9200/test/city/ -d '
     {"city": "Anchorage", 
      "state": "AK",
      "location": {
