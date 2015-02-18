@@ -8,6 +8,8 @@
   html body {
     width: 100%;
     height:100%;
+    padding:0;
+    margin:0;
   }
   #map {
     width:100%;
@@ -21,16 +23,31 @@
 <div id="map"></div>
 
 <script>
-var vectorSource = new ol.source.ServerVector({
+var postgisSource = new ol.source.ServerVector({
   format: new ol.format.GeoJSON(),
   loader: function(extent, resolution, projection) {
     var epsg4326Extent =
         ol.proj.transformExtent(extent, projection, 'EPSG:4326');
-    var url = 'http://localhost:5000/geonames/search?bbox=' +
+    var url = '/geonames/search?provider=postgis&bbox=' +
+        epsg4326Extent.join(',');
+    $.ajax(url).then(function(response) {
+      postgisSource.addFeatures(postgisSource.readFeatures(response));
+    });
+  },
+  //strategy: ol.loadingstrategy.bbox(),
+  projection: 'EPSG:3857'
+});
+
+var elasticsearchSource = new ol.source.ServerVector({
+  format: new ol.format.GeoJSON(),
+  loader: function(extent, resolution, projection) {
+    var epsg4326Extent =
+        ol.proj.transformExtent(extent, projection, 'EPSG:4326');
+    var url = '/geonames/search?provider=elasticsearch&bbox=' +
         epsg4326Extent.join(',');
     $.ajax(url).then(function(response) {
       // vectorSource.clear(); <-- causes infinite loop of requests (?!?)
-      vectorSource.addFeatures(vectorSource.readFeatures(response));
+      elasticsearchSource.addFeatures(elasticsearchSource.readFeatures(response));
     });
   },
   //strategy: ol.loadingstrategy.bbox(),
@@ -43,21 +60,21 @@ var getText = function(feature, resolution, dom) {
   // Not working ... return stringDivider(text, 12, '\n');
 };
 
-var createTextStyle = function(feature, resolution) {
+var createTextStyle = function(feature, resolution, offset, color) {
   return new ol.style.Text({
     textAlign: 'center',
     textBaseline: 'middle',
-    font: '9pt Arial',
+    font: '8pt Arial',
     text: getText(feature, resolution),
-    fill: new ol.style.Fill({color: 'white'}),
+    fill: new ol.style.Fill({color: color}),
     stroke: new ol.style.Stroke({color: 'rgba(0,2,4,0.3)', width: 5}),
     offsetX: 0,
-    offsetY: 0,
+    offsetY: offset,
     rotation: 0
   });
 };
 
-var createPointStyle = function() {
+var createPointStyle = function(offset, color) {
   return function(feature, resolution) {
     var style = new ol.style.Style({
       image: new ol.style.Circle({
@@ -65,15 +82,20 @@ var createPointStyle = function() {
         fill: new ol.style.Fill({color: 'rgba(255, 0, 0, 0.1)'}),
         stroke: new ol.style.Stroke({color: 'blue', width: 1})
       }),
-      text: createTextStyle(feature, resolution)
+      text: createTextStyle(feature, resolution, offset, color)
     });
     return [style];
   };
 };
 
-var vector = new ol.layer.Vector({
-  source: vectorSource,
-  style: createPointStyle()
+var postgisVector = new ol.layer.Vector({
+  source: postgisSource,
+  style: createPointStyle(-8, 'white')
+});
+
+var elasticsearchVector = new ol.layer.Vector({
+  source: elasticsearchSource,
+  style: createPointStyle(-8, 'white')
 });
 
 var raster = new ol.layer.Tile({
@@ -84,7 +106,7 @@ var raster = new ol.layer.Tile({
 });
 
 var map = new ol.Map({
-  layers: [raster, vector],
+  layers: [raster, postgisVector],
   target: document.getElementById('map'),
   projection: "EPSG:3857",
   view: new ol.View({

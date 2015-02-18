@@ -56,9 +56,8 @@ most developers just digging in.
 Both postgis and elasticsearch were installed to two separate virtualbox virtual machines 
 running Ubuntu 14.04 64-bit.
 Vagrant was used to orchestrate the setup and the setup was done via shell scripts.
-After running `vagrant up` in the root directory, I get two running VMs with port 
-forwarding so that  
-`9200` (for elasticsearch) and `5432` (for postgres) are available on my `localhost`. 
+After running `vagrant up` in the root directory, I get two running VMs with ports 
+`9200` (for elasticsearch) and `5432` (for postgres) available to the network.
 
 ### Networking
 
@@ -71,12 +70,9 @@ of most production environments:
 
 ### Postgres setup
 
-Two additional tweaks were made by hand to the postgres box 
-
-Now we can run this to test the connection:
+We can run this to test the connection:
 
     psql -d geonames -U postgres -h 192.168.99.2
-
 
 
 ### ElasticSearch
@@ -228,6 +224,7 @@ And now query it. See the json file for details.
 
 ## Benchmarks
 
+ab -n 10000 -c 10 "http://localhost:5000/geonames/search?bbox=-121.39277590296751,44.88370349926848,-121.05151308558469,45.13322931873461"
 
 for i in {1..10}
  do
@@ -246,6 +243,31 @@ done
 Wow, postgis is > 10x faster
 
 reusing sessions with the `requests` lib brings es down to `0.153`
+
+
+## ab testings
+
+A couple different server options
+
+    uwsgi --http :8000 -w app:app --venv /Users/mperry/env/geonames/  -p 8
+    gunicorn app:app -w 8
+    python gevent.wsgi.py
+    python twisted.wsgi.py
+
+Test with
+
+    ab -n 1000 -r -c 120 \
+    "http://127.0.0.1:8000/geonames/search?bbox=-121.39277590296751,44.88370349926848,-121.05151308558469,45.1332293187346&provider=postgis"
+
+
+Server                                     |  Median request time
+-------------------------------------------|-----------------------
+uwsgi with -p 8 workers                    |  162 ms
+gunincorn with -w 8 workers                |  158 ms
+tornado                                    |  553 ms 
+gevent                                     |  592 ms 
+built-in flask server                      |  655 ms 
+
 
 
 ## Front end
