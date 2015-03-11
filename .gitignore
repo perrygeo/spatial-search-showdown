@@ -1,3 +1,5 @@
 .vagrant
 _try*
-geonames-for-postgis/*
+*.pyc
+work
+geonames-for-postgis
