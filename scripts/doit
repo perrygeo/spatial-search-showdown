@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo cp /vagrant/templates/postgresql.conf /etc/postgresql/9.3/main/postgresql.conf
+sudo cp /vagrant/templates/pg_hba.conf /etc/postgresql/9.3/main/pg_hba.conf
+sudo service postgresql restart

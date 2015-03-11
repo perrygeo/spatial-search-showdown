@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"pro",
+				"provider"
+			],
+			[
+				"vect",
+				"vectorSource"
+			],
+			[
+				"exte",
+				"extent"
+			],
+			[
+				"r",
+				"requests"
+			],
+			[
+				"feature",
+				"featuretype"
+			],
+			[
+				"geo",
+				"geohash"
+			],
+			[
+				"fea",
+				"featurecodeid"
+			],
+			[
 				"sear",
 				"searchTermInput"
 			],
@@ -88,10 +116,6 @@
 				"Exception"
 			],
 			[
-				"feature",
-				"featureAttributionName"
-			],
-			[
 				"ag",
 				"aggregatedAttributes"
 			],
@@ -112,7 +136,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 400.0,
 		"selected_items":
 		[
 			[
@@ -122,6 +146,10 @@
 			[
 				":wq",
 				"BracketHighlighter: Swap Quotes"
+			],
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
 			],
 			[
 				":q",
@@ -180,7 +208,7 @@
 				"Package Control: Remove Package"
 			]
 		],
-		"width": 507.0
+		"width": 529.0
 	},
 	"console":
 	{
@@ -201,6 +229,13 @@
 	},
 	"file_history":
 	[
+		"/Users/mperry/Desktop/test.sql",
+		"/Users/mperry/projects/openpayments/query1.sql",
+		"/Users/mperry/projects/geonames/providers.py",
+		"/Users/mperry/projects/geonames/app.py",
+		"/etc/hosts",
+		"/Users/mperry/projects/geonames/index.html",
+		"/Users/mperry/projects/geonames/geonames-for-postgis/README.md",
 		"/Users/mperry/projects/geonames/volumes/es/data/elasticsearch.yml",
 		"/Users/mperry/projects/geonames/fig.yml",
 		"/Users/mperry/projects/p97/marco-portal2/static/_visualize/js/app.js",
@@ -321,14 +356,7 @@
 		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/issues/11/jscrollpane-2b3.js",
 		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/issues/11/jscrollpane-2b3.css",
 		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout-mapping/spec/lib/json2.js",
-		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout/spec/lib/JSSpec.js",
-		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout/spec/lib/JSSpec.css",
-		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout/spec/lib/json2.js",
-		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/jquery.bbq/shared/json_echo.php",
-		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/jquery/src/ajax/jsonp.js",
-		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/knockout-mapping/spec/lib/json2.js",
-		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/knockout/spec/lib/JSSpec.js",
-		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/knockout/spec/lib/JSSpec.css"
+		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout/spec/lib/JSSpec.js"
 	],
 	"find":
 	{
@@ -367,6 +395,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tweaks",
+			"Anchor",
+			"$",
+			"topology",
+			"typology",
 			"\\\\",
 			"//",
 			"WORKPATH",
@@ -489,12 +522,7 @@
 			"substation",
 			"class LeaseBlock",
 			"LeaseBlock",
-			"leaseblocks",
-			"null",
-			"aggregate",
-			"ipdb",
-			"Exception",
-			"serialize_attributes"
+			"leaseblocks"
 		],
 		"highlight": false,
 		"in_selection": false,
