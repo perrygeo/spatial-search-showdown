@@ -274,4 +274,10 @@ built-in flask server                      |  655 ms
 
 
 
-
+## TODO
+* [] geo_point and geo_shape mappings - continue to experiement
+* [] http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/indices-optimize.html
+* [] http://www.elasticsearch.org/blog/all-about-elasticsearch-filter-bitsets/ (bottom)
+* [] learn query dsl and do more advanced filtering
+* [] http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html
+* [] wrap and blog

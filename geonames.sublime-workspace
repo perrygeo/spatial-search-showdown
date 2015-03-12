@@ -229,6 +229,15 @@
 	},
 	"file_history":
 	[
+		"/Users/mperry/projects/geonames/scripts/install_postgis.sh",
+		"/Users/mperry/projects/geonames/templates/pg_hba.conf",
+		"/Users/mperry/projects/geonames/templates/postgresql.conf",
+		"/Users/mperry/projects/geonames/geonames_search/app.py",
+		"/Users/mperry/projects/geonames/geonames-for-postgis/build_geonames.sh",
+		"/Users/mperry/projects/geonames/benchmark.sql",
+		"/Users/mperry/projects/geonames/make_shp.sh",
+		"/Users/mperry/projects/geonames/backup_postgisdb.sh",
+		"/Users/mperry/projects/geonames/ogr.sh",
 		"/Users/mperry/Desktop/test.sql",
 		"/Users/mperry/projects/openpayments/query1.sql",
 		"/Users/mperry/projects/geonames/providers.py",
@@ -347,16 +356,7 @@
 		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/auto_reinitialise.html",
 		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/node_modules/browser-sync/lib/args.js",
 		"/Users/mperry/projects/p97/marco-portal2/deps/_scenarios_bad/scenarios/admin.py",
-		"/Users/mperry/projects/p97/marco-portal2/deps/wagtail/docs/editor_manual/getting_started.rst",
-		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/settings.html",
-		"/Users/mperry/projects/p97/marco-portal2/marco_site/assets/styles/bootstrap/responsive-embed.less",
-		"/Users/mperry/projects/p97/marco-portal2/README.md",
-		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/issues/12/jscrollpane-2b3.js",
-		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/issues/12/jscrollpane-2b3.css",
-		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/issues/11/jscrollpane-2b3.js",
-		"/Users/mperry/projects/p97/marco-portal2/static/bower_components/jscrollpane/issues/11/jscrollpane-2b3.css",
-		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout-mapping/spec/lib/json2.js",
-		"/Users/mperry/projects/p97/marco-portal2/marco_site/static/bower_components/knockout/spec/lib/JSSpec.js"
+		"/Users/mperry/projects/p97/marco-portal2/deps/wagtail/docs/editor_manual/getting_started.rst"
 	],
 	"find":
 	{
